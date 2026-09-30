@@ -110,7 +110,7 @@ class Game:
         self.stages[cell] += 1
         self.score += 25
         if self.stages[cell] == TARGET:
-            on_cube_completed(cell)
+         self.score += on_cube_completed(cell)
 
     def hop(self, key):
         if self.state != "play" or self.player.busy:
